@@ -1,6 +1,11 @@
+
+* {
+  font-family: Futura;
+}
+
 h1 {
-  color: yellow;
-  font-size: 200%;
+  color: red;
+  font-size: 90px;
   text-align:center;
 
 
@@ -8,14 +13,19 @@ h1 {
 
 h3 {
   color: white;
-  font-size: 120%;
+  font-size: 70px;
   text-align:center;
 }
 
 p {
-  font-size: 120%;
+  font-size: 30px;
 }
 
 body {
-  background-color: green;
+  background-color: blue;
+}
+
+nav {
+  color: green;
+  font-size: 40px;
 }

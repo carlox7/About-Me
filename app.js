@@ -1,19 +1,18 @@
 'use strict';
 
-// This is a comment line in JS
-/* This is a comment block in JS */
+// stores user's name //
 var userName = prompt('Hello stranger, what is your name?');
 alert('Hello ' + userName + ' nice to meet you!');
 var response1 = confirm ('Welcome to Carlo\'s webpage ' + userName + '.' + ' Would you like to take a quiz?');
-
+//responds to user input //
 if(response1){
   alert ('Awesome! Let\'s get started!');
 } else {
   alert ('I think I heard yes, lets get started!');
 }
-
+//yes or no question//
 var quizResponse1 = prompt('Please Answer with Y or N. Did Carlo go to Super Bowl 48?');
-
+//answer//
 if(quizResponse1.toUpperCase() === 'Y'){
   alert('Correct! He was there to see the Seahawks win their first Super Bowl title ever!');
 }else {
@@ -43,4 +42,12 @@ if(quizResponse4.toUpperCase() === 'Y'){
 
 }else{
   alert('Actually he is! better luck next time ' + userName + '.');
+}
+
+var quizResponse5 = prompt(userName + ', are you glad this quiz over?');
+
+if(quizResponse5.toUpperCase === 'Y'){
+  alert('Me too! Congrats on getting through it!');
+}else{
+  alert('Oh...well I ran out of questions so have a great day!');
 }
