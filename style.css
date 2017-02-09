@@ -1,0 +1,21 @@
+h1 {
+  color: yellow;
+  font-size: 200%;
+  text-align:center;
+
+
+}
+
+h3 {
+  color: white;
+  font-size: 120%;
+  text-align:center;
+}
+
+p {
+  font-size: 120%;
+}
+
+body {
+  background-color: green;
+}
