@@ -4,7 +4,8 @@
 }
 
 h1 {
-  color: red;
+  color: black;
+  background-color: red;
   font-size: 90px;
   text-align:center;
 
@@ -15,6 +16,11 @@ h3 {
   color: white;
   font-size: 70px;
   text-align:center;
+  background-color: blue;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 p {
@@ -22,12 +28,13 @@ p {
 }
 
 body {
-  background-color: blue;
+
 }
 
 nav {
   color: green;
   font-size: 40px;
+  display: inline;
 }
 
 script {

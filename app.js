@@ -51,3 +51,35 @@ if(quizResponse5.toUpperCase === 'Y'){
 }else{
   alert('Oh...well I ran out of questions so have a great day!');
 }
+
+for(var i = 0; i < 4; i++){
+  console.log(i);
+  var quizResponse6 = prompt('Carlo can you guess how many chicken nuggets I ate in one sitting?');
+  var numberGuess = parseInt(quizResponse6);
+  if(numberGuess < 50 && i < 3){
+    alert('Your guess is too low.');
+  }else if(numberGuess > 50 && i < 3){
+    alert('Your guess is too high');
+  }else if(numberGuess === 50 && i <= 3) {
+    alert('You are right!');
+    break;
+  }else if(numberGuess !== 50 && i === 3){
+    alert('Sorry you ran out of tries!');
+  }
+}
+
+var statesLivedIn = ['california','virginia'];
+for(var i = 0; i < 6; i++){
+  var quizResponse7 = prompt('Can you guess what other two states I have lived in? I will give you six guesses.');
+  var stateGuess = quizResponse7;
+  for(var ii = 0; ii < statesLivedIn.length; ii++){
+    if(stateGuess === statesLivedIn[ii]){
+      alert('congratulations! ' + stateGuess + ' is a state I lived in.');
+      i = 6;
+      break;
+    }
+  }
+  if(i === 5){
+    alert('Sorry you ran out of guesses, the answers are ' + statesLivedIn);
+  }
+}
