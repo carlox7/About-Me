@@ -76,13 +76,13 @@ for(var i = 0; i < 4; i++){
   }
 }
 //Question 7 with array and for loops
-var statesLivedIn = ['california','virginia'];
+var statesLivedIn = ['california','virginia','new york', 'oregon','hawaii','montana'];
 for(var i = 0; i < 6; i++){
-  var quizResponse7 = prompt('Can you guess what other two states I have lived in? I will give you six guesses.').toLowerCase();
+  var quizResponse7 = prompt('Can you guess any of the States I have been to? I will give you six guesses.').toLowerCase();
   var stateGuess = quizResponse7;
   for(var ii = 0; ii < statesLivedIn.length; ii++){
     if(stateGuess === statesLivedIn[ii]){
-      alert('congratulations! ' + stateGuess + ' is a state I lived in.');
+      alert('congratulations! ' + stateGuess + ' is a state I have been to.');
       i = 6;
       rightAnswers++;
       break;
