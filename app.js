@@ -1,5 +1,6 @@
 'use strict';
 
+var rightAnswers = 0;
 // stores user's name //
 var userName = prompt('Hello stranger, what is your name?');
 alert('Hello ' + userName + ' nice to meet you!');
@@ -15,6 +16,7 @@ var quizResponse1 = prompt('Please Answer with Y or N. Did Carlo go to Super Bow
 //answer//
 if(quizResponse1.toUpperCase() === 'Y'){
   alert('Correct! He was there to see the Seahawks win their first Super Bowl title ever!');
+  rightAnswers++;
 }else {
   alert('Wrong, he actually did go. Please make a note of it.');
 }
@@ -25,12 +27,14 @@ if(quizResponse2.toUpperCase() === 'Y'){
   alert('lol no, Carlo barely even knows how to swim');
 }else {
   alert('Correct! He once got 4th place in a 3 man race.');
+  rightAnswers++;
 }
 
 var quizResponse3 = prompt('Did Carlo once drive from Seattle to New York?');
 
 if(quizResponse3.toUpperCase() === 'Y'){
   alert('Correct! Carlo drove from Seattle to Syracuse and got a speeding ticket in Illinois');
+  rightAnswers++;
 }else{
   alert('Wrong! He drove all the way there and took showers at truck stop gas stations.');
 }
@@ -39,7 +43,7 @@ var quizResponse4 = prompt('Is Carlo a sushi expert?');
 
 if(quizResponse4.toUpperCase() === 'Y'){
   alert('Correct! Carlo has worked for almost ten years with sushi restaurants. He better know his stuff.');
-
+  rightAnswers++;
 }else{
   alert('Actually he is! better luck next time ' + userName + '.');
 }
@@ -48,6 +52,7 @@ var quizResponse5 = prompt(userName + ', are you glad this quiz over?');
 
 if(quizResponse5.toUpperCase === 'Y'){
   alert('Me too! Congrats on getting through it!');
+  rightAnswers++;
 }else{
   alert('Oh...well I ran out of questions so have a great day!');
 }
@@ -62,6 +67,7 @@ for(var i = 0; i < 4; i++){
     alert('Your guess is too high');
   }else if(numberGuess === 50 && i <= 3) {
     alert('You are right!');
+    rightAnswers++;
     break;
   }else if(numberGuess !== 50 && i === 3){
     alert('Sorry you ran out of tries!');
@@ -70,12 +76,13 @@ for(var i = 0; i < 4; i++){
 
 var statesLivedIn = ['california','virginia'];
 for(var i = 0; i < 6; i++){
-  var quizResponse7 = prompt('Can you guess what other two states I have lived in? I will give you six guesses.');
+  var quizResponse7 = prompt('Can you guess what other two states I have lived in? I will give you six guesses.').toLowerCase();
   var stateGuess = quizResponse7;
   for(var ii = 0; ii < statesLivedIn.length; ii++){
     if(stateGuess === statesLivedIn[ii]){
       alert('congratulations! ' + stateGuess + ' is a state I lived in.');
       i = 6;
+      rightAnswers++;
       break;
     }
   }
@@ -83,3 +90,4 @@ for(var i = 0; i < 6; i++){
     alert('Sorry you ran out of guesses, the answers are ' + statesLivedIn);
   }
 }
+console.log('This is how many answers you got right:' + rightAnswers);
