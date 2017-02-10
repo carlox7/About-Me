@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 //variable for logging user right answers
 var rightAnswers = 0;
 // stores user's name //
