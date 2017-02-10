@@ -79,10 +79,9 @@ for(var i = 0; i < 4; i++){
 var statesLivedIn = ['california','virginia','new york', 'oregon','hawaii','montana'];
 for(var i = 0; i < 6; i++){
   var quizResponse7 = prompt('Can you guess any of the States I have been to? I will give you six guesses.').toLowerCase();
-  var stateGuess = quizResponse7;
   for(var ii = 0; ii < statesLivedIn.length; ii++){
-    if(stateGuess === statesLivedIn[ii]){
-      alert('congratulations! ' + stateGuess + ' is a state I have been to.');
+    if(quizResponse7 === statesLivedIn[ii]){
+      alert('congratulations! ' + quizResponse7 + ' is a state I have been to.');
       i = 6;
       rightAnswers++;
       break;
@@ -94,3 +93,4 @@ for(var i = 0; i < 6; i++){
 }
 //User right answers logged to console
 console.log('This is how many answers you got right:' + rightAnswers);
+alert('This is how many answers you got right:' + rightAnswers);
