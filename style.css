@@ -8,6 +8,7 @@ h1 {
   background-color: red;
   font-size: 90px;
   text-align:center;
+  border-style: dashed;
 
 
 }
@@ -21,20 +22,35 @@ h3 {
   margin-right: auto;
   padding-left: 60px;
   padding-right: 60px;
+  border-color: black;
+  border-style: dashed;
 }
 
 p {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 body {
 
 }
+#nav ul{
+  display: inline-block;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-nav {
+#nav li {
+  text-align: center;
   color: green;
   font-size: 40px;
   display: inline;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
 }
 
 script {

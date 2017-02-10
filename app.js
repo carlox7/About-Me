@@ -1,5 +1,6 @@
 'use strict';
-
+/*
+//variable for logging user right answers
 var rightAnswers = 0;
 // stores user's name //
 var userName = prompt('Hello stranger, what is your name?');
@@ -16,6 +17,7 @@ var quizResponse1 = prompt('Please Answer with Y or N. Did Carlo go to Super Bow
 //answer//
 if(quizResponse1.toUpperCase() === 'Y'){
   alert('Correct! He was there to see the Seahawks win their first Super Bowl title ever!');
+  //adds user right answer to variable
   rightAnswers++;
 }else {
   alert('Wrong, he actually did go. Please make a note of it.');
@@ -48,18 +50,18 @@ if(quizResponse4.toUpperCase() === 'Y'){
   alert('Actually he is! better luck next time ' + userName + '.');
 }
 
-var quizResponse5 = prompt(userName + ', are you glad this quiz over?');
+var quizResponse5 = prompt(userName + ', Is Carlo Filipino?');
 
 if(quizResponse5.toUpperCase === 'Y'){
-  alert('Me too! Congrats on getting through it!');
+  alert('Yes! Carlo even lived in the Philippines when he was a kid');
   rightAnswers++;
 }else{
-  alert('Oh...well I ran out of questions so have a great day!');
+  alert('Actually he is, but born and raised in America.');
 }
-
+//Question 6 number guessing game
 for(var i = 0; i < 4; i++){
   console.log(i);
-  var quizResponse6 = prompt('Carlo can you guess how many chicken nuggets I ate in one sitting?');
+  var quizResponse6 = prompt(userName + ' can you guess how many chicken nuggets Carlo ate in one sitting?');
   var numberGuess = parseInt(quizResponse6);
   if(numberGuess < 50 && i < 3){
     alert('Your guess is too low.');
@@ -73,7 +75,7 @@ for(var i = 0; i < 4; i++){
     alert('Sorry you ran out of tries!');
   }
 }
-
+//Question 7 with array and for loops
 var statesLivedIn = ['california','virginia'];
 for(var i = 0; i < 6; i++){
   var quizResponse7 = prompt('Can you guess what other two states I have lived in? I will give you six guesses.').toLowerCase();
@@ -90,4 +92,5 @@ for(var i = 0; i < 6; i++){
     alert('Sorry you ran out of guesses, the answers are ' + statesLivedIn);
   }
 }
+//User right answers logged to console
 console.log('This is how many answers you got right:' + rightAnswers);
