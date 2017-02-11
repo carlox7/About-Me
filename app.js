@@ -13,60 +13,85 @@ if(response1){
   alert ('I think I heard yes, lets get started!');
 }
 
+//Quiz Questions
+var quizQuOne = 'Please Answer with Y or N. Did Carlo go to Super Bowl 48?';
+var quizQuTwo = 'Is Carlo a former Olympic swimmer?';
+var quizQuThree = 'Did Carlo once drive from Seattle to New York?';
+var quizQuFour = 'Is Carlo a sushi expert?';
+var quizQuFive = userName + ', Is Carlo Filipino?';
+
+//Quiz answers
+var answerOne = 'Correct! He was there to see the Seahawks win their first Super Bowl title ever!';
+var answerTwo = 'Correct! He once got 4th place in a 3 man race.';
+var answerThree = 'Correct! Carlo drove from Seattle to Syracuse and got a speeding ticket in Illinois';
+var answerFour = 'Correct! Carlo has worked for almost ten years with sushi restaurants. He better know his stuff.';
+var answerFive = 'Yes! Carlo even lived in the Philippines when he was a kid';
+
+//Wrong quiz answer
+var wrongAnOne = 'Wrong, he actually did go. Please make a note of it.';
+var wrongAnTwo = 'lol no, Carlo barely even knows how to swim';
+var wrongAnThree = 'Wrong! He drove all the way there and took showers at truck stop gas stations.';
+var wrongAnFour = 'Actually he is! better luck next time ' + userName + '.';
+var wrongAnFive = 'Actually he is, but born and raised in America.';
+//arrays for questions and answers
+var quizQ = [quizQuOne,quizQuTwo,quizQuThree,quizQuFour,quizQuFive];
+var quizA = [answerOne,answerTwo,answerThree,answerFour,answerFive];
+var quizWrong = [wrongAnOne,wrongAnTwo,wrongAnThree,wrongAnFour,wrongAnFive];
+
 function questionOne(){
-  //yes or no question//
-  var quizResponse1 = prompt('Please Answer with Y or N. Did Carlo go to Super Bowl 48?');
-  //answer//
+  //yes or no question one
+  var quizResponse1 = prompt(quizQ[0]);
+  //answer
   if(quizResponse1.toUpperCase() === 'Y'){
-    alert('Correct! He was there to see the Seahawks win their first Super Bowl title ever!');
+    alert(quizA[0]);
     //adds user right answer to variable
     rightAnswers++;
   }else {
-    alert('Wrong, he actually did go. Please make a note of it.');
+    alert(quizWrong[0]);
   }
 }
-
+//yes or no question two //
 function questionTwo(){
-  var quizResponse2 = prompt('Is Carlo a former Olympic swimmer?');
+  var quizResponse2 = prompt(quizQ[1]);
 
   if(quizResponse2.toUpperCase() === 'Y'){
-    alert('lol no, Carlo barely even knows how to swim');
+    alert(quizWrong[1]);
   }else {
-    alert('Correct! He once got 4th place in a 3 man race.');
+    alert(quizA[1]);
     rightAnswers++;
   }
 }
-
+//yes or no question three //
 function questionThree(){
-  var quizResponse3 = prompt('Did Carlo once drive from Seattle to New York?');
+  var quizResponse3 = prompt(quizQ[2]);
 
   if(quizResponse3.toUpperCase() === 'Y'){
-    alert('Correct! Carlo drove from Seattle to Syracuse and got a speeding ticket in Illinois');
+    alert(quizA[2]);
     rightAnswers++;
   }else{
-    alert('Wrong! He drove all the way there and took showers at truck stop gas stations.');
+    alert(quizWrong[2]);
   }
 }
-
+//yes or no question four//
 function questionFour(){
-  var quizResponse4 = prompt('Is Carlo a sushi expert?');
+  var quizResponse4 = prompt(quizQ[3]);
 
   if(quizResponse4.toUpperCase() === 'Y'){
-    alert('Correct! Carlo has worked for almost ten years with sushi restaurants. He better know his stuff.');
+    alert(quizA[3]);
     rightAnswers++;
   }else{
-    alert('Actually he is! better luck next time ' + userName + '.');
+    alert(quizWrong[3]);
   }
 }
-
+//yes or no answer five//
 function questionFive(){
-  var quizResponse5 = prompt(userName + ', Is Carlo Filipino?');
+  var quizResponse5 = prompt(quizQ[4]);
 
   if(quizResponse5.toUpperCase === 'Y'){
-    alert('Yes! Carlo even lived in the Philippines when he was a kid');
+    alert(quizA[4]);
     rightAnswers++;
   }else{
-    alert('Actually he is, but born and raised in America.');
+    alert(quizWrong[4]);
   }
 }
 
@@ -98,8 +123,10 @@ function questionSeven(){
     for(var ii = 0; ii < statesLivedIn.length; ii++){
       if(quizResponse7 === statesLivedIn[ii]){
         alert('congratulations! ' + quizResponse7 + ' is a state I have been to.');
+        //breaks first for loop after correct answer
         i = 6;
         rightAnswers++;
+        //breaks nested for loop
         break;
       }
     }
