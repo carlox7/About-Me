@@ -108,6 +108,13 @@ function questionSeven(){
     }
   }
 }
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
 
 //User right answers logged to console
 console.log('This is how many answers you got right:' + rightAnswers);
