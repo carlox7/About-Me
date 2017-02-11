@@ -119,9 +119,9 @@ function questionSeven(){
 //Question 7 with array and for loops
   var statesLivedIn = ['california','virginia','new york', 'oregon','hawaii','montana'];
   for(var i = 0; i < 6; i++){
-    var quizResponse7 = prompt('Can you guess any of the States I have been to? I will give you six guesses.').toLowerCase();
+    var quizResponse7 = prompt('Can you guess any of the States I have been to? I will give you six guesses.');
     for(var ii = 0; ii < statesLivedIn.length; ii++){
-      if(quizResponse7 === statesLivedIn[ii]){
+      if(quizResponse7.toLowerCase() === statesLivedIn[ii]){
         alert('congratulations! ' + quizResponse7 + ' is a state I have been to.');
         //breaks first for loop after correct answer
         i = 6;
