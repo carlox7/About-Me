@@ -31,15 +31,15 @@ p {
   height: 60%;
   width: 60%;
   background-color: cyan;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
 
 }
 #nav ul{
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 #nav li {
@@ -47,9 +47,7 @@ body {
   color: green;
   font-size: 40px;
   display: inline;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: orange;
 }
 
